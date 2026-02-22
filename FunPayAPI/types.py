@@ -846,7 +846,7 @@ class LotFields:
         :rtype: :class:`FunPayAPI.types.LotFields`
         """
         self.__fields["offer_id"] = str(self.lot_id or 0)
-        self.__fields["node_id"] = str(self.subcategory.id or 0)
+        self.__fields["node_id"] = "0" if self.subcategory is None else self.subcategory.id
         self.__fields["fields[summary][ru]"] = self.title_ru
         self.__fields["fields[summary][en]"] = self.title_en
         self.__fields["fields[desc][ru]"] = self.description_ru
