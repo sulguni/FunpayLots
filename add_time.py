@@ -1,7 +1,10 @@
 from FunPayAPI import Account, Runner, types, enums
-import copy
+import copy, os
 
-TOKEN = ""
+TOKEN = os.getenv("FP_TOKEN")
+if TOKEN is None:
+    print("token not set")
+    exit()
 
 acc = Account(TOKEN).get()
 

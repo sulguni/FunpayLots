@@ -19,7 +19,7 @@ games[1450] = ("Outlast", {"server_id": "8897", "fields[platform]": "(PC) Steam"
 games[3204] = ("Assassin's Creed Shadows", {"fields[platform]": "PC"})
 games[3222] = ("Escape the Backrooms", {"server_id": "11212", "fields[platform]": "PC"})
 games[2888] = ("7 Days to Die", {"fields[platform]": "PC", "fields[type]": "Standard Edition"})
-games[1352] = ("The Last of Us Part I", {"server_id": "9838", "fields[platform]": "PC", "fields[type]": "Standard Edition"})
+games[1352] = ("The Last of Us Part I", {"server_id": "9838", "fields[platform]": "PC", "fields[steamegs]": "Steam", "fields[type]": "Standard Edition"})
 games[872] = ("Elden Ring", {"server_id": "7027", "fields[type]": "Аренда"})
 
 times = """
@@ -83,7 +83,7 @@ def fill_category(subcategory_id: int):
     for t in times:
         lot = types.LotFields(0, {}, acc.get_subcategory(types.SubCategoryTypes.COMMON, subcategory_id))
         lot.active = True
-        lot.amount = 1
+        lot.amount = 111
         lot.currency = types.Currency.RUB
         lot.deactivate_after_sale = True
         lot.description_en = lot_desc_en
